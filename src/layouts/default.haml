@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title StaticMatic
+    = stylesheets :screen, :media => :screen
+    /[if IE 6]
+      %link(href="/stylesheets/ie6.css" rel="stylesheet" type="text/css")
+  %body
+    = yield
