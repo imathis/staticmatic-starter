@@ -11,8 +11,9 @@ If your ruby gems version is behind, you'll need to update ruby gems first, then
 
     gem update --system
 
-If you haven't already, you'll also need to install gems for Compass and fancy-buttons:
+If you haven't already, you'll also need to install these gems:
 
+    gem install fssm
     gem install compass
     gem install fancy-buttons
 
