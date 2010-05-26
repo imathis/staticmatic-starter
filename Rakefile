@@ -2,11 +2,6 @@ ssh_user      = "user@host.com"    # for rsync deployment
 document_root = "~/document_root/" # for rsync deployment
 source = "src"
 
-desc "Runs preview"
-task :preview do
-  system "staticmatic preview ."
-end
-
 desc "Builds the site"
 task :build => 'styles:clear' do
   puts "*** Building the site ***"
