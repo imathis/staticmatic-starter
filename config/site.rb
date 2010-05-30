@@ -1,6 +1,4 @@
 require 'compass'
-# Parse the Compass config
-Compass.add_project_configuration('config.rb')
 
 # Default is 3000
 configuration.preview_server_port = 4000
