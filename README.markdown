@@ -17,6 +17,11 @@ If you haven't already, you'll also need to install these gems:
     gem install compass
     gem install fancy-buttons
 
+## Compass Configuration
+
+Now StaticMatic automatically detects the compass configuration and loads in your settings from /config/compass.rb. I currently have my
+configuration set such that <code>relative_assets = true</code> I often deploy to subdirectories on a development server to share my static prototypes.
+If you are deploying to root directories, you will probably want to comment out the relative_assets line or remove it.
 
 ## Goodies
 - <code>rake build</code> builds the site
