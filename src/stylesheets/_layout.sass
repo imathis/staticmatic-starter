@@ -1,0 +1,41 @@
+$page-width: 980px
+$page-pad: 30px
+$sidebar-pad: 20px
+$sidebar-width: 300px
+$main-width: $page-width - $sidebar-width !default
+
+.invert-pad
+  margin-left: -$page-pad
+  margin-right: -$page-pad
+
+.page-pad
+  padding-left: $page-pad
+  padding-right: $page-pad
+.page-width
+  width: $page-width
+  margin: 0 auto
+
+body
+  min-width: $page-width
+#header
+  @extend .page-width
+  padding-top: $page-pad
+#page
+  @extend .page-width
+  @extend .clear
+#main
+  @extend .clear
+  //allows for right border-width
+  width: $main-width - 1px
+#content
+  float: left
+  width: $main-width - $page-pad*2 - 1px
+  padding: $page-pad
+#sidebar
+  float: left
+  width: $sidebar-width - $sidebar-pad*2
+  padding: $page-pad $sidebar-pad
+  margin: 0 (-$sidebar-width) 0 0
+#footer
+  @extend .page-width
+  padding: $page-pad 0

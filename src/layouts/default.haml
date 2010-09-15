@@ -6,4 +6,19 @@
     /[if IE 6]
       %link(href="/stylesheets/ie6.css" rel="stylesheet" type="text/css")
   %body
-    = yield
+    #header
+      %ul#nav
+        %li 
+          %a(href="#") Home
+        %li 
+          %a(href="#") About
+        %li 
+          %a(href="#") Contact
+      %h1
+        %a(href="/") Site Name
+    #page
+      #main
+        #content= yield        
+        #sidebar= partial("sidebar")
+    #footer
+      Copyrights usually go here. Better not break the mold!

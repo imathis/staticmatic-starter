@@ -1,8 +1,13 @@
-@import fancy-buttons
-body
-  text-align: center
-  font:
-    family: Verdana
-    size: 16pt
-button
-  +fancy-button(#005a91, 25px, 1em, 2px)
+@import library/defaults
+
+@import layout
+@import theme
+
+@import partials/typography
+@import partials/header
+@import partials/navigation
+@import partials/page
+@import partials/sidebar
+@import partials/footer
+
+@import library/clearing-classes

@@ -1,0 +1,15 @@
+$body-bg: #aaa
+$page-bg: #f2f2f2
+$sidebar-bg: #eaeaea
+
+body
+  background: $body-bg
+  color: #222
+#main
+  border-right: 1px solid darken($sidebar-bg, 10)
+#content
+  background: $page-bg
+  @extend .round-left-corners
+#page
+  background: $sidebar-bg
+  @extend .round-corners

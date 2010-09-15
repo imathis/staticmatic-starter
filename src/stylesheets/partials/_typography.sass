@@ -1,0 +1,36 @@
+.sans-font
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif
+.serif-font
+  font-family: Georgia, Times, "Times New Roman", serif
+.fixed-font
+  font-family: "Menlo", "Bitstream Vera Sans", Monaco, "Andale Mono", "Lucida Console", monospace
+  
+strong
+  font-weight: bold
+em
+  font-style: italic
+body
+  font-size: 16px
+  @extend .sans-font
+  line-height: 1.45em
+
+#{headings()}
+  @extend .sans-font
+  font-weight: bold
+  padding-bottom: .4em
+  line-height: 1.2em
+
+h6
+  font-size: 1.1em
+h5
+  font-size: 1.3em
+h4
+  font-size: 1.6em
+h3
+  font-size: 2em
+h2
+  font-size: 2.4em
+h1
+  font-size: 2.8em
+p, ul, ol
+  padding-bottom: 1.1em

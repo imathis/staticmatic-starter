@@ -1,0 +1,25 @@
+@import compass
++global-reset
+@import fancy-buttons
+//@import library/nocss3
+@import library/extensions
+
+
+//base classes
+.round-corners
+  +border-radius(6px)
+.round-right-corners
+  @extend .round-corners
+  @extend .clear-left-rounding
+.round-left-corners
+  @extend .round-corners
+  @extend .clear-right-rounding
+.round-top-corners
+  @extend .round-corners
+  @extend .clear-bottom-rounding
+.round-bottom-corners
+  @extend .round-corners
+  @extend .clear-top-rounding
+  
+.clear
+  +pie-clearfix

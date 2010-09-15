@@ -1,0 +1,56 @@
+/* These are handy little mixins I often use to support common patterns with a simpler API
+
+
+// Create a simple top to bottom linear gradient with a background-color backup
+// The first argument, $color will be output as background-color: $color
+//
+// This yields a gradient that is 5% brighter on the top and 5% darker on the bottom 
+//
+//     +gradient-bg(#777)
+//
+// This yeilds a gradient where the bright and dark colors are shifted 10% from the original color.
+// If you don't specify a third argument it will assign this value for the darkness too, keeping the gradient even.
+//
+//     +gradient-bg(#777, 10)
+//
+// You can also pass a invert the gradient (dark color on top) by passing a negative number for $top
+//
+//     +gradient-bg(#777, -10)
+//
+// This yeilds a gradient where the top is bright but the bottom is the same as the $color provided
+//
+//     +gradient-bg(#777, 8, 0)
+
+=gradient-bg($color, $top: 5, $bottom: $top)
+  @if $top < 0 and $bottom < 0
+    $color1: darken($color, abs($top))
+    $color2: lighten($color, abs($bottom))
+    +linear-gradient(color-stops($color1, $color2))
+  @else
+    $color1: lighten($color, abs($top))
+    $color2: darken($color, abs($bottom))
+    +linear-gradient(color-stops($color1, $color2))
+  background-color: $color
+  
+// A shortcut for linear-gradient (where the are only two colors provided) which also assumes a second color and split point.
+
+=v-gradient($color1, $color2: darken($color1, 5), $color-split: 100%)
+  +linear-gradient(color-stops($color1, $color2 $color-split, $color2))
+
+
+// Attempts to generate a text shadow based on the color of the text
+
+=smart-text-shadow($color, $darken: 10, $saturation: 15)
+  @if lightness($color) < lightness(#aaa)
+    +text-shadow(darken(saturate($color, 15), 10), 0, -1px)
+  @else
+    +text-shadow(lighten(desaturate($color, 15), 10))
+
+
+=color-text($bg, $dark: #333, $light: #fff, $shadow: false)
+  @if lightness($bg) < lightness(#aaa)
+    color: $light
+  @else
+    color: $dark
+  @if $shadow
+    +smart-text-shadow($bg)
