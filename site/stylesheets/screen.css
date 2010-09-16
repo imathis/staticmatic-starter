@@ -19,7 +19,7 @@ a img { border: none; }
 .fancy-button-reset-base-class:focus, button:focus { outline: none; }
 
 /* These are handy little mixins I often use to support common patterns with a simpler API */
-.round-corners, .round-right-corners, .round-left-corners, #content, .round-top-corners, .round-bottom-corners, #page { -moz-border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px; -ms-border-radius: 6px; -khtml-border-radius: 6px; border-radius: 6px; }
+.round-corners, .round-right-corners, .round-left-corners, #main, .round-top-corners, .round-bottom-corners, #page { -moz-border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px; -ms-border-radius: 6px; -khtml-border-radius: 6px; border-radius: 6px; }
 
 .clear, #page, #main { *zoom: 1; }
 .clear:after, #page:after, #main:after { content: "\0020"; display: block; height: 0; clear: both; overflow: hidden; visibility: hidden; }
@@ -44,9 +44,7 @@ body { min-width: 980px; }
 
 body { background: #aaaaaa; color: #222222; }
 
-#main { border-right: 1px solid #d1d1d1; }
-
-#content { background: #f2f2f2; }
+#main { border-right: 1px solid #d1d1d1; background: #f2f2f2; }
 
 #page { background: #eaeaea; }
 
@@ -97,8 +95,8 @@ button:active, button:active:visited { color: white; }
 /* Clear border radius */
 .clear-top-left-rounding, .clear-top-rounding, .round-bottom-corners, .clear-left-rounding, .round-right-corners { -moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; -o-border-top-left-radius: 0; -ms-border-top-left-radius: 0; -khtml-border-top-left-radius: 0; border-top-left-radius: 0; }
 
-.clear-top-right-rounding, .clear-top-rounding, .round-bottom-corners, .clear-right-rounding, .round-left-corners, #content { -moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; -o-border-top-right-radius: 0; -ms-border-top-right-radius: 0; -khtml-border-top-right-radius: 0; border-top-right-radius: 0; }
+.clear-top-right-rounding, .clear-top-rounding, .round-bottom-corners, .clear-right-rounding, .round-left-corners, #main { -moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; -o-border-top-right-radius: 0; -ms-border-top-right-radius: 0; -khtml-border-top-right-radius: 0; border-top-right-radius: 0; }
 
-.clear-bottom-right-rounding, .clear-bottom-rounding, .round-top-corners, .clear-right-rounding, .round-left-corners, #content { -moz-border-radius-bottomright: 0; -webkit-border-bottom-right-radius: 0; -o-border-bottom-right-radius: 0; -ms-border-bottom-right-radius: 0; -khtml-border-bottom-right-radius: 0; border-bottom-right-radius: 0; }
+.clear-bottom-right-rounding, .clear-bottom-rounding, .round-top-corners, .clear-right-rounding, .round-left-corners, #main { -moz-border-radius-bottomright: 0; -webkit-border-bottom-right-radius: 0; -o-border-bottom-right-radius: 0; -ms-border-bottom-right-radius: 0; -khtml-border-bottom-right-radius: 0; border-bottom-right-radius: 0; }
 
 .clear-bottom-left-rounding, .clear-bottom-rounding, .round-top-corners, .clear-left-rounding, .round-right-corners { -moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0; -o-border-bottom-left-radius: 0; -ms-border-bottom-left-radius: 0; -khtml-border-bottom-left-radius: 0; border-bottom-left-radius: 0; }

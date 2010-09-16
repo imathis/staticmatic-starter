@@ -4,17 +4,6 @@ $sidebar-pad: 20px
 $sidebar-width: 300px
 $main-width: $page-width - $sidebar-width !default
 
-.invert-pad
-  margin-left: -$page-pad
-  margin-right: -$page-pad
-
-.page-pad
-  padding-left: $page-pad
-  padding-right: $page-pad
-.page-width
-  width: $page-width
-  margin: 0 auto
-
 body
   min-width: $page-width
 #header
@@ -39,3 +28,15 @@ body
 #footer
   @extend .page-width
   padding: $page-pad 0
+
+
+/* Extend ready layout classes
+.invert-pad
+  margin-left: -$page-pad
+  margin-right: -$page-pad
+.page-pad
+  padding-left: $page-pad
+  padding-right: $page-pad
+.page-width
+  width: $page-width
+  margin: 0 auto

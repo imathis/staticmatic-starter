@@ -1,3 +1,7 @@
+# 1.0.1
+  - Documented extendable layout classes
+  - Improved theme for different length sidebar and main content
+
 # 1.0
   
   - Added stylesheets to match personal framework organization scheme.
