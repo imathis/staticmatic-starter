@@ -1,6 +1,6 @@
 #change these values if you deploy with rsync
 ssh_user      = "user@host.com"    # for rsync deployment
-document_root = "~/document_root/" # for rsync deployment
+remote_root = "~/document_root/" # for rsync deployment
 
 source = "src"  #source directory (needed to auto-rebuild site on changes)
 
