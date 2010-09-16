@@ -1,3 +1,6 @@
+# 1.0.2
+  - Added `rake push` so I can deploy without regenerating the site.
+
 # 1.0.1
   - Documented extendable layout classes
   - Improved theme for different length sidebar and main content

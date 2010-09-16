@@ -4,6 +4,11 @@ document_root = "~/document_root/" # for rsync deployment
 
 source = "src"  #source directory (needed to auto-rebuild site on changes)
 
+desc "Runs preview"
+task :preview do
+  system "staticmatic preview ."
+end
+
 desc "Builds the site"
 task :build => 'styles:clear' do
   puts "*** Building the site ***"
@@ -11,9 +16,14 @@ task :build => 'styles:clear' do
 end
 
 desc "Clears and generates new styles, builds and deploys"
-task :deploy => :build do
+task :deploy => [:build, :push] do
   puts "*** Deploying the site ***"
-  system("rsync -avz --delete site/ #{ssh_user}:#{document_root}")
+  
+end
+
+desc "push"
+task :push do
+  system("rsync -avz --delete site/ #{ssh_user}:#{remote_root}")
 end
 
 namespace :styles do
