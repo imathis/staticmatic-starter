@@ -1,3 +1,6 @@
+# 1.0.3
+  - Added RVM gemset support for @staticmatic-starter gemset
+
 # 1.0.2
   - Added `rake push` so I can deploy without regenerating the site.
 
