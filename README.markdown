@@ -26,6 +26,8 @@ If you are deploying to root directories, you will probably want to comment out 
 ## Goodies
 - <code>rake build</code> builds the site
 - <code>rake watch</code> watches your project directory and automatically recompiles the site as you change files
-- <code>rake deploy</code> deploys the site to your remote server (based on your configurations in the rakefile)
+- <code>rake push</code> deploys the site (via rsync) to your remote server (based on your configurations in the rakefile)
+- <code>rake deploy</code> runs build and then push
+
 
 That's about it, pretty simple really.
