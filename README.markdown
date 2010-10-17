@@ -2,20 +2,15 @@
 *This is what I use when I start a new StaticMatic project.*
 
 ## Setup
-**Cutting edge alert**: I'm using a prerelease version of StaticMatic for now. When it is released as stable, I'll update this.
-If <code>gem -v</code> shows that you're already on ruby gems 1.3.6 or greater Simply run
+This project is now using bundler and an RVM gem sets. This means setup is as simple as opening the console to the project directory and:
 
-    gem install staticmatic --pre
+<pre><code>
+  rvm gemset create 'staticmatic-starter'
+  bundle install
+</code></pre>
 
-If your ruby gems version is behind, you'll need to update ruby gems first, then install StaticMatic as shown above.
-
-    gem update --system
-
-If you haven't already, you'll also need to install these gems:
-
-    gem install fssm
-    gem install compass
-    gem install fancy-buttons
+**Note:** If you're not using RVM, you can still install the gems with bundler using `bundle install`. RVM gem sets are great because they let you
+isolate your gem libraries per project.
 
 ## Compass Configuration
 
