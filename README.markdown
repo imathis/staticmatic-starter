@@ -2,12 +2,10 @@
 *This is what I use when I start a new StaticMatic project.*
 
 ## Setup
-This project is now using bundler and an RVM gem sets. This means setup is as simple as opening the console to the project directory and:
+This project is now using bundler and RVM gem sets. This means setup is as simple as opening the console to the project directory and adding an RVM gem set:
 
-<pre><code>
-  rvm gemset create 'staticmatic-starter'
-  bundle install
-</code></pre>
+<pre><code>rvm gemset create 'staticmatic-starter'
+bundle install</code></pre>
 
 **Note:** If you're not using RVM, you can still install the gems with bundler using `bundle install`. RVM gem sets are great because they let you
 isolate your gem libraries per project.
